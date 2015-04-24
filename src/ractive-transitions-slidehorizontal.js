@@ -106,4 +106,5 @@
 	};
 
 	Ractive.transitions.slidehorizontal = slide;
+	Ractive.transitions.slideh = slide;
 }));

@@ -8,21 +8,26 @@
 	<link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' href='demo/main.css'>
 
-	<!-- TODO add styles specific to this demo -->
 	<style type='text/css'>
-
+		#demo span {
+			display: inline-block;
+			vertical-align: top;
+		}
+		#demo button {
+			vertical-align: top;
+		}
 	</style>
 </head>
 
 <body>
 
 	<!-- if the project is on GitHub, add a fork me button! -->
-	<!-- <a class='forkme' href='https://github.com/you/repo'>Fork me on GitHub</a> -->
+	<a class='forkme' href='https://github.com/zenflow/ractive-transitions-slidehorizontal'>Fork me on GitHub</a>
 
 	<header>
 		<h1>Ractive.js slidehorizontal transition plugin</h1>
 		<p class='strap'>
-			<span class='download'>download: <a href='[TODO]'>ractive-transitions-slidehorizontal.js</a></span>
+			<span class='download'>download: <a href='https://raw.github.com/zenflow/ractive-transitions-slidehorizontal/master/ractive-transitions-slidehorizontal.js'>ractive-transitions-slidehorizontal.js</a></span>
 			<span class='more-plugins'>more plugins at <a href='http://docs.ractivejs.org/latest/plugins'>docs.ractivejs.org/latest/plugins</a></span>
 		</p>
 	</header>
@@ -43,8 +48,14 @@
 
 	<!-- Demo template -->
 	<script id='demo-template' type='text/ractive'>
-		<!-- TODO -->
-		<p>This is a demo of the plugin</p>
+		{{#words:i}}
+			<span intro-outro='slideh:{ delay:{{ i*200 }}, duration: 600 }' >
+				{{this}} &nbsp;
+			</span>
+		{{/words}}
+		{{#showButton}}
+			<button intro-outro='slideh' on-click='again'>Show me again!</button>
+		{{/showButton}}
 	</script>
 
 	<!-- Dependencies -->
@@ -53,11 +64,24 @@
 
 	<!-- Demo code -->
 	<script id='demo-code'>
-		// TODO
-		ractive = new Ractive({
-			el: 'demo',
-			template: '#demo-template'
-		});
+		var render = function () {
+			ractive = new Ractive({
+				el: 'demo',
+				template: '#demo-template'
+			});
+
+			// Add some words, then show the reset button
+			ractive.set( 'words', 'Elements can be horizontally slidden in in a variety of creative ways'.split( ' ' ), function () {
+				this.set( 'showButton', true );
+			});
+
+			ractive.on( 'again', function () {
+				// Teardown, then re-render once fadeouts are complete
+				ractive.teardown( render );
+			});
+		};
+
+		render();
 	</script>
 
 	<!-- Insert code into the page -->

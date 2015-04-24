@@ -2,9 +2,18 @@
 
 A horizontal slide transition seems as useful as a vertical one...
 
-*Find more Ractive.js plugins at [docs.ractivejs.org/latest/plugins](http://docs.ractivejs.org/latest/plugins)*
+This transition has an alias by the name of 'slideh', so you can do
+``` html
+<div intro="slideh: {easing: 'easeIn'}">
+```
+as well as
+``` html
+<div intro="slidehorizontal: {easing: 'easeIn'}">
+```
 
-[See the demo here.](TODO)
+[See the demo here.](http://zenflow.github.io/ractive-transitions-slidehorizontal/)
+
+*Find more Ractive.js plugins at [docs.ractivejs.org/latest/plugins](http://docs.ractivejs.org/latest/plugins)*
 
 ## Usage
 
