@@ -31,8 +31,6 @@ Or, if you're using a module loader, require this module:
 require( 'ractive-transitions-slidehorizontal' );
 ```
 
-**plugin-specific instructions to go here...**
-
 
 
 ## License
