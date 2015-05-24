@@ -39,7 +39,7 @@
 
 	// Common JS (i.e. node/browserify)
 	else if ( typeof module !== 'undefined' && module.exports && typeof require === 'function' ) {
-		factory( require( 'ractive' ) );
+		module.exports = factory( require( 'ractive' ) );
 	}
 
 	// browser global
@@ -104,7 +104,7 @@
 
 		t.animateStyle( targetStyle, params ).then( t.complete );
 	};
-
 	Ractive.transitions.slidehorizontal = slide;
 	Ractive.transitions.slideh = slide;
+	return slide;
 }));
