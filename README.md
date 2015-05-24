@@ -1,4 +1,4 @@
-# Ractive.js slidehorizontal transition plugin
+#  Horizontal slide transition plugin for Ractive
 
 A horizontal slide transition seems as useful as a vertical one...
 
