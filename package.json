@@ -22,7 +22,7 @@
     "url": "https://github.com/zenflow/obs-router"
   },
   "peerDependencies": {
-    "ractive": "^0.5.4"
+    "ractive": "^0.7.3"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

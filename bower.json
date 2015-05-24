@@ -1,21 +1,6 @@
 {
 	"name": "ractive-transitions-slidehorizontal",
-	"version": "0.1.0",
-	"author": "Matthew Francis Brunetti",
-	"main": "ractive-transitions-slidehorizontal.js",
 	"dependencies": {
-		"ractive": "^0.5.4"
-	},
-	"ignore": [
-		".*",
-		"*.json",
-		"demo",
-		"grunt",
-		"node_modules",
-		"src",
-		"test",
-		"Gruntfile.js",
-		"index.html",
-		"README.md"
-	]
+		"ractive": "^0.7.3"
+	}
 }
