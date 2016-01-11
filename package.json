@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zenflow/obs-router"
+    "url": "https://github.com/zenflow/ractive-transitions-slidehorizontal"
   },
   "peerDependencies": {
     "ractive": "^0.7.3"
