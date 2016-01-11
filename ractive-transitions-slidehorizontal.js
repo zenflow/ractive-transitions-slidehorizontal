@@ -3,7 +3,7 @@
 	ractive-transitions-slidehorizontal
 	=======================================================
 
-	Version 1.0.0.
+	Version 1.0.3.
 
 	A horizontal slide transition seems as useful as a vertical one...
 
