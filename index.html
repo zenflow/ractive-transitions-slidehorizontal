@@ -47,7 +47,7 @@
 	<script id='demo-template' type='text/ractive'>
 		{{#words:i}}
 			<span intro-outro='slideh:{ delay:{{ i*200 }}, duration: 600 }' >
-				{{this}} &nbsp;
+				{{this}}&nbsp;
 			</span>
 		{{/words}}
 		{{#showButton}}
@@ -67,13 +67,14 @@
 			});
 
 			// Add some words, then show the reset button
-			ractive.set( 'words', 'Elements can be horizontally slidden in in a variety of creative ways'.split( ' ' ), function () {
-				this.set( 'showButton', true );
-			});
+			ractive.set('words', 'Elements can be horizontally slidden in in a variety of creative ways'.split( ' ' ))
+				.then(function () {
+					ractive.set( 'showButton', true );
+				});
 
 			ractive.on( 'again', function () {
 				// Teardown, then re-render once fadeouts are complete
-				ractive.teardown( render );
+				ractive.teardown().then( render );
 			});
 		};
 
